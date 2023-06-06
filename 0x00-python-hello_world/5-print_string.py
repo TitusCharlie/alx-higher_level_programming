@@ -1,4 +1,4 @@
-#!/usr/bin/pyton3
-str = "The first nine characters contained in str are:\n"
-print(str*3)
+#!/usr/bin/python3
+str = "Holberton School"
+print(3 * str)
 print(str[:9])
