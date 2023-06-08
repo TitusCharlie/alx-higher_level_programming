@@ -10,7 +10,7 @@ def list_of_argv():
     word = string.parse_args()
     result = word.words
     if len(result) == 0:
-        print("0 argument")
+        print("0 arguments.")
     if len(result) > 0:
         if len(result) == 1:
             print("1 argument:")
