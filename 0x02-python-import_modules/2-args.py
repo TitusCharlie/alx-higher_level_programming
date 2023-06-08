@@ -1,8 +1,11 @@
 #!/usr/bin/python3
 import argparse
 
+
 def list_of_argv():
-    string = argparse.ArgumentParser(description='print all the arguments in a particulat format')
+    string = argparse.ArgumentParser(description='print '
+                                                 'all the arguments in '
+                                                 'a particulat format')
     string.add_argument('words', nargs='*')
     word = string.parse_args()
     result = word.words
@@ -15,7 +18,7 @@ def list_of_argv():
             print(f"{len(result)} arguments:")
         num = 1
         for value in result:
-            if len(result)== 1:
+            if len(result) == 1:
                 print(f"{num}: {value}")
             else:
                 print(f"{num}: {value}")
