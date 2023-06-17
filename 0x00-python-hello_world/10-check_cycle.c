@@ -61,3 +61,26 @@ void free_listint(listint_t *head)
         free(current);
     }
 }
+
+/**
+ * check_cycle - checks if a singly linked list has a cycle in it
+ * @list: pointer to the cycled list
+ * 
+ * Return 0 if no cycled, 1 if cycled
+ */
+int check_cycle(listint_t *list)
+{
+	listint_t *start;
+
+	while (list != NULL)
+	{
+		start = list;
+		list = list->next;
+
+		if (list != start)
+			return(0);
+		return(1);
+		free(start);
+	}
+	return(0);
+}

@@ -2,6 +2,7 @@
 #include <string.h>
 #include <stdio.h>
 #include "lists.h"
+#include "10-check_cycle.c"
 
 /**
  * main - check the code
