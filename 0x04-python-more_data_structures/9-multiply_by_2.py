@@ -3,6 +3,7 @@ def multiply_by_2(a_dictionary):
     result = {}
     for k, v in a_dictionary.items:
         if type(v) is not int:
-            exit(1)
-        result[k] = v * 2
+            result[k] = v
+        else:
+            result[k] = v * 2
     return result
