@@ -3,6 +3,8 @@
 
 
 class Square:
+    """create instances for the class"""
+
     def __init__(self, size=0, position=(0, 0)):
         self.size = size
         self.position = position
@@ -36,7 +38,7 @@ class Square:
 
     def my_print(self):
         if self.__size == 0:
-            print()
+            print("")
         for i in range(self.__size):
             if self.__position[1] > 0:
                 pass
