@@ -3,7 +3,6 @@
 class Square():
     def __init__(self, size=0):
         self.__size = size
-    
     """create a property instance for the object"""
     @property
     def size(self):
@@ -22,8 +21,10 @@ class Square():
     def area(self):
         return (self.__size)**2
 
-    """Public instance method to print 
-    in stdout the square with the character #"""
+    """
+    Public instance method to print
+    in stdout the square with the character #
+    """
     def my_print(self):
         if self.__size == 0:
             pass
@@ -31,5 +32,3 @@ class Square():
             for j in range(self.__size):
                 print("#", end="")
             print("\n")
-
-
