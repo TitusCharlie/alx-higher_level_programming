@@ -8,7 +8,7 @@ class Square():
         """instantiate the object of the callin function"""
         self.__size = size
 
-    """instantiate a property object to retrive the instance of the main class"""
+    """retrive the instance of the main class"""
     @property
     def size(self):
         return self.__size
