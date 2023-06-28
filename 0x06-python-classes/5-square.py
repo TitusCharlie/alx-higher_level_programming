@@ -1,6 +1,8 @@
 #!/usr/bin/python3
+"""define a class"""
 
-class Square():
+
+class Square:
     def __init__(self, size=0):
         self.__size = size
     """create a property instance for the object"""
