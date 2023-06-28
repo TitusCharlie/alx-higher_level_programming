@@ -4,8 +4,9 @@
 
 class Square:
     def __init__(self, size=0):
-        self.__size = size
-    """create a property instance for the object"""
+        self.size = size
+   
+   """create a property instance for the object"""
     @property
     def size(self):
         return self.__size
