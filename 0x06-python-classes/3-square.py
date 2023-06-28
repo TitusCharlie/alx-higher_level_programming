@@ -16,4 +16,4 @@ class Square():
 
     """define a public instance method that returns the area"""
     def area(self):
-        returns self.__size*2
+        returns self.__size**2
