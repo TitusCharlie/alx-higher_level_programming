@@ -74,10 +74,10 @@ int check_cycle(listint_t *list)
 
 	while (list != NULL)
 	{
+		start = malloc(sizeof(listint_t));
 		start = list;
-		list = list->next;
 
-		if (list != start)
+		if (*list[-1] != *start)
 			return(0);
 		return(1);
 		free(start);
