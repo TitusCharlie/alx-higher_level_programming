@@ -53,10 +53,11 @@ class Rectangle:
     def __str__(self):
         if self.__width == 0 or self.__height == 0:
             return ""
-        result = ""
-        for i in range(self.__width):
-            print("#")
-            result = ""
-            for j in range(self.__height):
-                result.join("#")
-                return result
+        result = []
+        for i in range(self.__height):
+            rows = ""
+            for j in range(self.__width):
+                rows += "#"
+            result.append(rows)
+        output = "\n".join(result)
+        return output
