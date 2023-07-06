@@ -13,7 +13,6 @@ class Rectangle:
     @property
     def width(self):
         return self.__width
-
     """retrieve the property instance"""
     @width.setter
     def width(self, value):
@@ -38,3 +37,26 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
+
+    """public instace method"""
+    def area(self):
+        result = self.__width * self.__height
+        return result
+
+    """public instance method"""
+    def perimeter(self):
+        if self.__width == 0 or self.__height == 0:
+            return 0
+        else:
+            return (self.__width * 2) + (self.__height * 2)
+
+    def __str__(self):
+        if self.__width == 0 or self.__height == 0:
+            return ""
+        result = ""
+        for i in range(self.__width):
+            print("#")
+            result = ""
+            for j in range(self.__height):
+                result.join("#")
+                return result

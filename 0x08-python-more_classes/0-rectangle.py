@@ -3,5 +3,5 @@
 
 
 class Rectangle:
-    def __str__(self):
-        pass
+    """pass the class"""
+    pass
