@@ -1,5 +1,9 @@
 #!/usr/bin/python3
-"""method for student creation"""
+"""
+===========================
+method for student creation
+===========================
+"""
 
 
 class Student:
@@ -11,4 +15,6 @@ class Student:
         self.age = age
 
     def to_json(self):
+        """return dictionary"""
+
         return self.__dict__
