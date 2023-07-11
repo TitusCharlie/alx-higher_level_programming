@@ -1,17 +1,16 @@
 #!/usr/bin/python3
-"""create a class MyList that inherits from list
-
-Public instance method that prints the list,
-but sorted (ascending sort)
-
-You can assume that all the elements of the list
-will be of type int
+"""
+===========================
+Module with class MyList
+===========================
 """
 
+
 class MyList(list):
-    """class with print_sorted method"""
+    """Class with method print_sorted"""
     pass
 
     def print_sorted(self):
-    """method to sort a list"""
+        """Methot that sorted a list"""
+
         print(sorted(list(self)))
