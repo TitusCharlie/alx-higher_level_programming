@@ -4,6 +4,8 @@
 module with class BaseGeometry
 ===================================
 """
+
+
 Rectangle = __import__('9-rectangle').Rectangle
 
 
@@ -20,7 +22,8 @@ class Square(Rectangle):
     def area(self):
         """rectangle area"""
 
-        return self.__size ** 2
+        return self.__size * self.__size
 
     def __str__(self):
-        return "[Square] {}/{}".format(self.__size, self.__size)
+        return "[{}] {}/{}".format(type(self).__name__, self.__size,
+                                   self.__size)
