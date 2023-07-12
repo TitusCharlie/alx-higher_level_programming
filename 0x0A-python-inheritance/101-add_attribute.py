@@ -6,10 +6,9 @@ module that adds new attributes
 """
 
 
-def add_attribute(class, obj, attr):
+def add_attribute(obj, name, value):
   """add attr to an obj"""
   
-  if class.obj == NULL:
-    class.obj = attr
-  else:
-    raise TypeError("can't add new attribute")
+  if not hasattr(obj, "__dict__"):
+        raise TypeError("can't add new attribute")
+    setattr(obj, name, value)
