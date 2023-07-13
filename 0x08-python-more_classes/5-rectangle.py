@@ -45,7 +45,6 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         self.__height = value
 
-
     def area(self):
         """return the area of the rectangle"""
         return self.__height * self.__width
@@ -60,7 +59,7 @@ class Rectangle:
     def __str__(self):
         """print the rectangle shape with #"""
         if self.__width == 0 or self.__height == 0:
-            return""
+            return ""
         result = []
         for i in range(self.__height):
             rows = ""
@@ -74,6 +73,7 @@ class Rectangle:
         """return rectangle"""
 
         return "Rectangle({}, {})".format(self.__width, self.__height)
+
     def __del__(self):
         """return a message after deletion"""
 
