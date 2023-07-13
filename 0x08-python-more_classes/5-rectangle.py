@@ -7,10 +7,9 @@ module 5-rectangle
 
 
 class Rectangle:
+    """insantiate the attributes"""
 
     def __init__(self, width=0, height=0):
-        """instantiate the attribute"""
-
         self.__width = width
         self.__height = height
 
