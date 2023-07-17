@@ -101,3 +101,45 @@ class Rectangle(Base):
         output = "\n".join(result)
         print(output)
 
+    def update(self, *args, **kwargs):
+        """update argument input"""
+
+
+        if len(args) >= 1:
+            self.id = args[0]
+        if len(args) >= 2:
+            self.__width = args[1]
+        if len(args) >= 3:
+            self.__height = args[2]
+        if len(args) >= 4:
+            self.__x = args[3]
+        if len(args) >= 5:
+            self.__y = args[4]
+        
+        for key, value in kwargs.items():
+            if 'id' == key:
+                self.id = value
+            if 'width' == key:
+                self.__width = value
+            if 'height' == key:
+                self.__height = value
+            if 'x' == key:
+                self.__x = value
+            if 'y' == key:
+                self.__y = value
+
+
+        """
+        instance_attr = ['id', '__width', '__height','__x', '__y']
+
+        for i, value in enumerate(args):
+            if i < len(instance_attr):
+                setattr(self, instance_attr[i], value)
+            else:
+                break"""
+
+
+    def __str__(self):
+        """return an override string"""
+
+        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
