@@ -15,17 +15,19 @@ class Rectangle(Base):
 
     def __init__(self, width, height, x=0, y=0, id=None):
         super().__init__(id)
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
 
-    def get_width(self):
+    @property
+    def width(self):
         """return value of width"""
 
         return self.__width
 
-    def set_width(self, value):
+    @width.setter
+    def width(self, value):
         """set the value of width"""
 
         if not isinstance(value, int):
@@ -36,12 +38,14 @@ class Rectangle(Base):
         else:
             self.__width = value
 
-    def get_height(self):
+    @property
+    def height(self):
         """return value of height"""
 
         return self.__height
 
-    def set_height(self, value):
+    @height.setter
+    def height(self, value):
         """set the value of height"""
 
         if not isinstance(value, int):
@@ -52,12 +56,14 @@ class Rectangle(Base):
         else:
             self.__height = value
 
-    def get_x(self):
+    @property
+    def x(self):
         """return value of x"""
 
         return self.__x
 
-    def set_x(self, value):
+    @x.setter
+    def x(self, value):
         """set the value of x"""
 
         if not isinstance(value, int):
@@ -68,12 +74,14 @@ class Rectangle(Base):
         else:
             self.__x = value
 
-    def get_y(self):
+    @property
+    def y(self):
         """return value of y"""
 
         return self.__y
 
-    def set_y(self, value):
+    @y.setter
+    def y(self, value):
         """set the value of y"""
 
         if not isinstance(value, int):
@@ -93,9 +101,9 @@ class Rectangle(Base):
         """loop through to print rectangle in #"""
 
         result = []
-        for i in range(self.get_height()):
+        for i in range(self.height):
             adding = ""
-            for j in range(self.get_width()):
+            for j in range(self.width):
                 adding += "#"
             result.append(adding)
         output = "\n".join(result)
@@ -142,4 +150,4 @@ class Rectangle(Base):
     def __str__(self):
         """return an override string"""
 
-        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
+        return f"[{type(self).__name__}] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
