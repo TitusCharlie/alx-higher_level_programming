@@ -123,7 +123,7 @@ class Rectangle(Base):
             self.__x = args[3]
         if len(args) >= 5:
             self.__y = args[4]
-        
+
         for key, value in kwargs.items():
             if 'id' == key:
                 self.id = value
