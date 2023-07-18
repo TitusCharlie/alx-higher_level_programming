@@ -9,7 +9,6 @@ create a class square
 """
 
 
-
 class Square(Rectangle):
     """class construct"""
 
@@ -40,7 +39,7 @@ class Square(Rectangle):
                 - 4th argument represents y attribute
             **kwargs (dict): New key/value pairs of attributes.
         """
-        
+
         if args and len(args) != 0:
             a = 0
             for arg in args:
@@ -73,7 +72,7 @@ class Square(Rectangle):
 
     def to_dictionary(self):
         """Return the dictionary representation of the Square."""
-        
+
         return {
             "id": self.id,
             "size": self.width,
@@ -84,4 +83,4 @@ class Square(Rectangle):
     def __str__(self):
         """return an override string"""
 
-        return f"[{type(self).__name__}] ({self.id}) {self.x}/{self.y} - {self.height}"
+        return f"[Square] ({self.id}) {self.x}/{self.y} - {self.height}"

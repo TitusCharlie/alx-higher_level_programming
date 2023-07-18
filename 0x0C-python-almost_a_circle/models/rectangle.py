@@ -2,7 +2,6 @@
 """import module base"""
 from models.base import Base
 
-
 """
 ===========================================
 create Rectangle class to inherit from Base
@@ -51,8 +50,7 @@ class Rectangle(Base):
         if not isinstance(value, int):
             raise TypeError("heigh must be an integer")
         elif value <= 0:
-            raise ValueError("height must be > 0")        
-
+            raise ValueError("height must be > 0")
         else:
             self.__height = value
 
@@ -112,7 +110,6 @@ class Rectangle(Base):
     def update(self, *args, **kwargs):
         """update argument input"""
 
-
         if len(args) >= 1:
             self.id = args[0]
         if len(args) >= 2:
@@ -136,9 +133,7 @@ class Rectangle(Base):
             if 'y' == key:
                 self.__y = value
 
-
-        """
-        instance_attr = ['id', '__width', '__height','__x', '__y']
+        """instance_attr = ['id', '__width', '__height','__x', '__y']
 
         for i, value in enumerate(args):
             if i < len(instance_attr):
@@ -146,8 +141,9 @@ class Rectangle(Base):
             else:
                 break"""
 
-
     def __str__(self):
         """return an override string"""
 
-        return f"[{type(self).__name__}] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
+        width = self.width
+        height = self.height
+        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {width}/{height}"
