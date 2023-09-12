@@ -8,4 +8,3 @@ if (!isNaN(intValue)) {
 } else {
   console.log('Not a number');
 }
-
