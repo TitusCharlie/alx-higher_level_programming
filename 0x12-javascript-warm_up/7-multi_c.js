@@ -10,4 +10,3 @@ if (!isNaN(intValue)) {
 } else {
   console.log('Missing number of occurrences');
 }
-  
