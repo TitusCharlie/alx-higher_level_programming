@@ -1,12 +1,10 @@
 #!/usr/bin/node
 
-const arg1 = process.argv[2];
-const arg2 = process.argv[3];
+const arg1 = 'undefined';
+const arg2 = 'undefined';
 
-if (arg1 && arg2) {
-  console.log(`${arg1} is ${arg2}`);
+if (process.argv[2] && process.argv[3]) {
+  console.log(`${process.argv[2]} is ${process.argv[3]}`);
 } else {
-  const arg1 = 'undefined';
-  const arg2 = 'undefined';
   console.log(`${arg1} is ${arg2}`);
 }
