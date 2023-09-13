@@ -2,8 +2,8 @@
 
 //array of numbers
 
-let largestNum = process.argv[2];
-let secLargest = process.argv[2];
+let largestNum = parseInt(process.argv[2]);
+let secLargest = parseInt(process.argv[2]);
 
 if(process.argv.length < 4) {
 	console.log(0);
