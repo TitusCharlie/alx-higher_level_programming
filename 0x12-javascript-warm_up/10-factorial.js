@@ -1,10 +1,10 @@
 #!/usr/bin/node
 
-function factorial(number) {
+function factorial (number) {
   if (number < 1 || isNaN(number)) {
     return 1;
   } else {
-    return factorial(number - 1) * number
+    return factorial(number - 1) * number;
   }
 }
 
