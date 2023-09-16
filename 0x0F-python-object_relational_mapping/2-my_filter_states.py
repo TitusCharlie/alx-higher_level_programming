@@ -20,13 +20,13 @@ def filter_states(username, password, database, state_name):
                 passwd=password,
                 db=database,
                 host='localhost',
-                port=3306
                 )
 
         cursor = connection.cursor()
 
-        query = 'SELECT * FROM states WHERE name = %s ORDER BY id ASC'
+        query = 'SELECT * FROM states WHERE name LIKE %s ORDER BY id ASC'
         cursor.execute(query, (f'%{state_name}%',))
+
         result = cursor.fetchall()
 
         for name in result:
