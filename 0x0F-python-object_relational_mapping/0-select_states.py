@@ -1,5 +1,10 @@
 #!/usr/bin/python3
 
+
+"""
+    module that list all the states in the database
+"""
+
 import argparse
 import MySQLdb
 
