@@ -1,10 +1,12 @@
 #!/usr/bin/python3
 
+
 """
     Module that takes in an argument
     displays all values in the states table of database
     where name matches the argument
 """
+
 
 import argparse
 import MySQLdb
