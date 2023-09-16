@@ -6,7 +6,7 @@ let largestNum = parseInt(process.argv[2]);
 let secLargest = parseInt(process.argv[2]);
 
 function secondLargest () {
-  if (process.argv.length < 4 && process.argv.length > 2) {
+  if (process.argv.length < 4) {
     console.log(0);
     return;
   }

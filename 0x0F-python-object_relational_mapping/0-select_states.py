@@ -4,9 +4,14 @@ import argparse
 import MySQLdb
 
 def list_states(username, password, database):
-    
+
     try:
-        connection = MySQLdb.connect(user=username, passwd=password, db=database, host='localhost', port=3306)
+        connection = MySQLdb.connect(
+                user=username,
+                passwd=password,
+                db=database,
+                host='localhost',
+                port=3306)
 
         cursor = connection.cursor()
 
@@ -26,7 +31,8 @@ def list_states(username, password, database):
 
 
 def main():
-    parser = argparse.ArgumentParser(description='List all states from a MySQL database.')
+    parser = argparse.ArgumentParser(
+            description='List all states from a MySQL database.')
     parser.add_argument('username', type=str, help='MySQL username')
     parser.add_argument('password', type=str, help='MySQL password')
     parser.add_argument('database', type=str, help='Database name')
