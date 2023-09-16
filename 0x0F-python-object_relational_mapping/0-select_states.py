@@ -17,7 +17,6 @@ if __name__ == '__main__':
     parser.add_argument('database', type=str, help='Database name')
     args = parser.parse_args()
 
-
     def list_states(username, password, database):
 
         connection = MySQLdb.connect(
@@ -34,12 +33,9 @@ if __name__ == '__main__':
         result = cursor.fetchall()
 
         for ids in result:
-                print(ids)
-
+            print(ids)
 
         cursor.close()
         connection.close()
 
-
     list_states(args.username, args.password, args.database)
-
