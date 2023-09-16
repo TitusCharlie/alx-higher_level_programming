@@ -1,7 +1,15 @@
 #!/usr/bin/python3
 
+
+"""
+    Module  that lists all states with a name
+    starting with N (upper N) from the database
+"""
+
+
 import argparse
 import MySQLdb
+
 
 def list_states(username, password, database):
 
@@ -39,6 +47,7 @@ def main():
     args = parser.parse_args()
 
     list_states(args.username, args.password, args.database)
+
 
 if __name__ == '__main__':
     main()
