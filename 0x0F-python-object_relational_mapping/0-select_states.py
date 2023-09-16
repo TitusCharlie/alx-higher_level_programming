@@ -47,5 +47,6 @@ def main():
 
     list_states(args.username, args.password, args.database)
 
+
 if __name__ == '__main__':
     main()
