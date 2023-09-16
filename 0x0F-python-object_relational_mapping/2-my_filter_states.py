@@ -1,9 +1,16 @@
 #!/usr/bin/python3
 
+"""
+    Module that takes in an argument
+    displays all values in the states table of database
+    where name matches the argument
+"""
+
 import argparse
 import MySQLdb
 
-def list_states(username, password, database, state_name):
+
+def filter_states(username, password, database, state_name):
 
     try:
         connection = MySQLdb.connect(
@@ -11,7 +18,8 @@ def list_states(username, password, database, state_name):
                 passwd=password,
                 db=database,
                 host='localhost',
-                port=3306)
+                port=3306
+                )
 
         cursor = connection.cursor()
 
@@ -40,7 +48,8 @@ def main():
     parser.add_argument('state_name', type=str, help='State name')
     args = parser.parse_args()
 
-    list_states(args.username, args.password, args.database, args.state_name)
+    filter_states(args.username, args.password, args.database, args.state_name)
+
 
 if __name__ == '__main__':
     main()
