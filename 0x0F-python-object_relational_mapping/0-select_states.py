@@ -20,29 +20,25 @@ if __name__ == '__main__':
 
     def list_states(username, password, database):
 
-        try:
-            connection = MySQLdb.connect(
-                    user=username,
-                    passwd=password,
-                    db=database,
-                    host='localhost',
-                    port=3306)
+        connection = MySQLdb.connect(
+                user=username,
+                passwd=password,
+                db=database,
+                host='localhost',
+                port=3306)
 
-            cursor = connection.cursor()
+        cursor = connection.cursor()
 
-            cursor.execute('SELECT * FROM states ORDER BY id ASC')
+        cursor.execute('SELECT * FROM states ORDER BY id ASC')
 
-            result = cursor.fetchall()
+        result = cursor.fetchall()
 
-            for ids in result:
+        for ids in result:
                 print(ids)
 
-        except MySQLdb.Error as e:
-            print(f"Error: {e}")
 
-        finally:
-            cursor.close()
-            connection.close()
+        cursor.close()
+        connection.close()
 
 
     list_states(args.username, args.password, args.database)
