@@ -1,7 +1,14 @@
 #!/usr/bin/python3
 
+"""
+    Module that correct sql injection following
+    module 2 script
+"""
+
+
 import argparse
 import MySQLdb
+
 
 def list_states(username, password, database, state_name):
 
@@ -41,6 +48,7 @@ def main():
     args = parser.parse_args()
 
     list_states(args.username, args.password, args.database, args.state_name)
+
 
 if __name__ == '__main__':
     main()
