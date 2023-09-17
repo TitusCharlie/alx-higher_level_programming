@@ -1,9 +1,16 @@
 #!/usr/bin/python3
 
+"""
+    Module that lists all cities from the database
+    The state each city belong
+"""
+
+
 import argparse
 import MySQLdb
 
-def list_states(username, password, database, state_name):
+
+def list_cities(username, password, database):
 
     try:
         connection = MySQLdb.connect(
@@ -15,8 +22,11 @@ def list_states(username, password, database, state_name):
 
         cursor = connection.cursor()
 
-        query = 'SELECT * FROM states WHERE name = %s ORDER BY id ASC'
-        cursor.execute(query, (state_name,))
+        query = '''SELECT cities.id, cities.name, states.name
+        FROM cities
+        JOIN states ON cities.state_id = states.id
+        ORDER BY cities.id ASC'''
+        cursor.execute(query)
 
         result = cursor.fetchall()
 
@@ -37,10 +47,10 @@ def main():
     parser.add_argument('username', type=str, help='MySQL username')
     parser.add_argument('password', type=str, help='MySQL password')
     parser.add_argument('database', type=str, help='Database name')
-    parser.add_argument('state_name', type=str, help='State name')
     args = parser.parse_args()
 
-    list_states(args.username, args.password, args.database, args.state_name)
+    list_cities(args.username, args.password, args.database)
+
 
 if __name__ == '__main__':
     main()
