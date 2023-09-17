@@ -24,9 +24,11 @@ def filter_states(username, password, database, state_name):
 
         cursor = connection.cursor()
 
-        query = 'SELECT * FROM states WHERE name LIKE %s ORDER BY id ASC'
-        cursor.execute(query, (f'%{state_name}%',))
+        query = """ SELECT * FROM states
+          WHERE name LIKE BINARY '{}'
+          ORDER BY id ASC """.format(args.state_name)
 
+        cursor.execute(query)
         result = cursor.fetchall()
 
         for name in result:
