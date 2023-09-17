@@ -2,7 +2,7 @@
 
 """
     Module that takes in the name of a state as an argument
-    list all cities of that state, using the database 
+    list all cities of that state, using the database
 """
 
 
@@ -31,7 +31,7 @@ def list_cities(username, password, database, state_name):
 
         result = cursor.fetchall()
 
-        city_name = [', '.join(name) for name in result ]
+        city_name = [', '.join(name) for name in result]
         print(', '.join(city_name))
 
     except MySQLdb.Error as e:
