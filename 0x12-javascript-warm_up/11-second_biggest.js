@@ -13,12 +13,12 @@ function secondLargest () {
 
   // pick two numbers in the array
   for (let i = 3; i < process.argv.length; i++) {
-    const currentNum = process.argv[i];
+    const currentNum = parseInt(process.argv[i]);
     if (currentNum > secLargest) {
       secLargest = currentNum;
       if (currentNum > largestNum) {
         secLargest = largestNum;
-        largestNum = currentNum;
+	largestNum = currentNum;
       }
     }
   }
@@ -26,4 +26,6 @@ function secondLargest () {
   console.log(secLargest);
 }
 
+//print the output
 secondLargest();
+
