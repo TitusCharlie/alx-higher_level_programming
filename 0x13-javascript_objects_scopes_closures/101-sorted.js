@@ -3,7 +3,7 @@
 const inputDict = require('./101-data').dict;
 
 // Function to swap keys and values in a dictionary
-function swapKeysAndValues(obj) {
+function swapKeysAndValues (obj) {
   const result = {};
   for (const key in obj) {
     const value = obj[key];
@@ -19,4 +19,3 @@ function swapKeysAndValues(obj) {
 const outputDict = swapKeysAndValues(inputDict);
 
 console.log(outputDict);
-
