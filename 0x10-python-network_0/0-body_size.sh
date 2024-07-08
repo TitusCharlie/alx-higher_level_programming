@@ -1,8 +1,8 @@
 #!/bin/bash
 
 if [ $# -ne 1 ]; then
-	echo "Usage: $0 <URL>"
-	exit 1
+  echo "Usage: $0 <URL>"
+  exit 1
 fi
 
 #Capture the URL from the first argument
